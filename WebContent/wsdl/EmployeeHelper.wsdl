@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://Employee.AirlineSystem.project" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://Employee.AirlineSystem.project" xmlns:intf="http://Employee.AirlineSystem.project" xmlns:tns1="http://beanFiles" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://Employee.AirlineSystem.project" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://beanFiles"/>
+   <element name="createNewEmployee">
+    <complexType>
+     <sequence>
+      <element name="empObj" type="tns1:PersonBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createNewEmployeeResponse">
+    <complexType>
+     <sequence>
+      <element name="createNewEmployeeReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updDeleteEmployee">
+    <complexType>
+     <sequence>
+      <element name="empObj" type="tns1:PersonBean"/>
+      <element name="emp" type="xsd:string"/>
+      <element name="isUpdate" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updDeleteEmployeeResponse">
+    <complexType>
+     <sequence>
+      <element name="updDeleteEmployeeReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchEmployee">
+    <complexType>
+     <sequence>
+      <element name="empObj" type="tns1:PersonBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchEmployeeResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="searchEmployeeReturn" type="tns1:PersonBean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="listEmployee">
+    <complexType/>
+   </element>
+   <element name="listEmployeeResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="listEmployeeReturn" type="tns1:PersonBean"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://beanFiles" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="PersonBean">
+    <sequence>
+     <element name="address" nillable="true" type="xsd:string"/>
+     <element name="city" nillable="true" type="xsd:string"/>
+     <element name="contact_no" nillable="true" type="xsd:string"/>
+     <element name="created_by" nillable="true" type="xsd:string"/>
+     <element name="creation_date" nillable="true" type="xsd:dateTime"/>
+     <element name="date_of_birth" nillable="true" type="xsd:dateTime"/>
+     <element name="email" nillable="true" type="xsd:string"/>
+     <element name="employee_id" nillable="true" type="xsd:string"/>
+     <element name="end_date" nillable="true" type="xsd:dateTime"/>
+     <element name="first_name" nillable="true" type="xsd:string"/>
+     <element name="gender" nillable="true" type="xsd:string"/>
+     <element name="hire_date" nillable="true" type="xsd:dateTime"/>
+     <element name="id_no" nillable="true" type="xsd:string"/>
+     <element name="id_type" nillable="true" type="xsd:string"/>
+     <element name="last_name" nillable="true" type="xsd:string"/>
+     <element name="last_updated" nillable="true" type="xsd:dateTime"/>
+     <element name="last_updated_by" nillable="true" type="xsd:string"/>
+     <element name="middle_initial" nillable="true" type="xsd:string"/>
+     <element name="passWrd" nillable="true" type="xsd:string"/>
+     <element name="person_id" type="xsd:int"/>
+     <element name="position" nillable="true" type="xsd:string"/>
+     <element name="state" nillable="true" type="xsd:string"/>
+     <element name="username" nillable="true" type="xsd:string"/>
+     <element name="work_description" nillable="true" type="xsd:string"/>
+     <element name="zipcode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="listEmployeeRequest">
+
+      <wsdl:part element="impl:listEmployee" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchEmployeeResponse">
+
+      <wsdl:part element="impl:searchEmployeeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createNewEmployeeRequest">
+
+      <wsdl:part element="impl:createNewEmployee" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="listEmployeeResponse">
+
+      <wsdl:part element="impl:listEmployeeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updDeleteEmployeeRequest">
+
+      <wsdl:part element="impl:updDeleteEmployee" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createNewEmployeeResponse">
+
+      <wsdl:part element="impl:createNewEmployeeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updDeleteEmployeeResponse">
+
+      <wsdl:part element="impl:updDeleteEmployeeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchEmployeeRequest">
+
+      <wsdl:part element="impl:searchEmployee" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="EmployeeHelper">
+
+      <wsdl:operation name="createNewEmployee">
+
+         <wsdl:input message="impl:createNewEmployeeRequest" name="createNewEmployeeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createNewEmployeeResponse" name="createNewEmployeeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updDeleteEmployee">
+
+         <wsdl:input message="impl:updDeleteEmployeeRequest" name="updDeleteEmployeeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updDeleteEmployeeResponse" name="updDeleteEmployeeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchEmployee">
+
+         <wsdl:input message="impl:searchEmployeeRequest" name="searchEmployeeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:searchEmployeeResponse" name="searchEmployeeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="listEmployee">
+
+         <wsdl:input message="impl:listEmployeeRequest" name="listEmployeeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:listEmployeeResponse" name="listEmployeeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="EmployeeHelperSoapBinding" type="impl:EmployeeHelper">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createNewEmployee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createNewEmployeeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createNewEmployeeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updDeleteEmployee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updDeleteEmployeeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updDeleteEmployeeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchEmployee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchEmployeeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchEmployeeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="listEmployee">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="listEmployeeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="listEmployeeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="EmployeeHelperService">
+
+      <wsdl:port binding="impl:EmployeeHelperSoapBinding" name="EmployeeHelper">
+
+         <wsdlsoap:address location="http://localhost:8080/AirlineManagementSystem/services/EmployeeHelper"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

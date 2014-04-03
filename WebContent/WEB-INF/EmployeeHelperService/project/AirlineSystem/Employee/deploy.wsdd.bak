@@ -1,0 +1,47 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from EmployeeHelperService WSDL service -->
+
+  <service name="EmployeeHelper" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://Employee.AirlineSystem.project"/>
+      <parameter name="wsdlServiceElement" value="EmployeeHelperService"/>
+      <parameter name="schemaQualified" value="http://Employee.AirlineSystem.project,http://beanFiles"/>
+      <parameter name="wsdlServicePort" value="EmployeeHelper"/>
+      <parameter name="className" value="project.AirlineSystem.Employee.EmployeeHelperSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="EmployeeHelper"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="createNewEmployee" qname="operNS:createNewEmployee" xmlns:operNS="http://Employee.AirlineSystem.project" returnQName="retNS:createNewEmployeeReturn" xmlns:retNS="http://Employee.AirlineSystem.project" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:empObj" xmlns:pns="http://Employee.AirlineSystem.project" type="tns:PersonBean" xmlns:tns="http://beanFiles"/>
+      </operation>
+      <operation name="updDeleteEmployee" qname="operNS:updDeleteEmployee" xmlns:operNS="http://Employee.AirlineSystem.project" returnQName="retNS:updDeleteEmployeeReturn" xmlns:retNS="http://Employee.AirlineSystem.project" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:empObj" xmlns:pns="http://Employee.AirlineSystem.project" type="tns:PersonBean" xmlns:tns="http://beanFiles"/>
+        <parameter qname="pns:emp" xmlns:pns="http://Employee.AirlineSystem.project" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:isUpdate" xmlns:pns="http://Employee.AirlineSystem.project" type="tns:boolean" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="searchEmployee" qname="operNS:searchEmployee" xmlns:operNS="http://Employee.AirlineSystem.project" returnQName="retNS:searchEmployeeReturn" xmlns:retNS="http://Employee.AirlineSystem.project" returnType="rtns:PersonBean" xmlns:rtns="http://beanFiles" soapAction="" >
+        <parameter qname="pns:empObj" xmlns:pns="http://Employee.AirlineSystem.project" type="tns:PersonBean" xmlns:tns="http://beanFiles"/>
+      </operation>
+      <operation name="listEmployee" qname="operNS:listEmployee" xmlns:operNS="http://Employee.AirlineSystem.project" returnQName="retNS:listEmployeeReturn" xmlns:retNS="http://Employee.AirlineSystem.project" returnType="rtns:PersonBean" xmlns:rtns="http://beanFiles" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="listEmployee searchEmployee createNewEmployee updDeleteEmployee"/>
+
+      <typeMapping
+        xmlns:ns="http://beanFiles"
+        qname="ns:PersonBean"
+        type="java:beanFiles.PersonBean"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

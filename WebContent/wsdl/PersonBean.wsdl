@@ -1,0 +1,2494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://beanFiles" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://beanFiles" xmlns:intf="http://beanFiles" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://beanFiles" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getAddress">
+    <complexType/>
+   </element>
+   <element name="getAddressResponse">
+    <complexType>
+     <sequence>
+      <element name="getAddressReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getState">
+    <complexType/>
+   </element>
+   <element name="getStateResponse">
+    <complexType>
+     <sequence>
+      <element name="getStateReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setState">
+    <complexType>
+     <sequence>
+      <element name="state" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setStateResponse">
+    <complexType/>
+   </element>
+   <element name="getPosition">
+    <complexType/>
+   </element>
+   <element name="getPositionResponse">
+    <complexType>
+     <sequence>
+      <element name="getPositionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setPosition">
+    <complexType>
+     <sequence>
+      <element name="position" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setPositionResponse">
+    <complexType/>
+   </element>
+   <element name="getLast_updated_by">
+    <complexType/>
+   </element>
+   <element name="getLast_updated_byResponse">
+    <complexType>
+     <sequence>
+      <element name="getLast_updated_byReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getLast_updated">
+    <complexType/>
+   </element>
+   <element name="getLast_updatedResponse">
+    <complexType>
+     <sequence>
+      <element name="getLast_updatedReturn" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getWork_description">
+    <complexType/>
+   </element>
+   <element name="getWork_descriptionResponse">
+    <complexType>
+     <sequence>
+      <element name="getWork_descriptionReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmployee_id">
+    <complexType/>
+   </element>
+   <element name="getEmployee_idResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmployee_idReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDate_of_birth">
+    <complexType/>
+   </element>
+   <element name="getDate_of_birthResponse">
+    <complexType>
+     <sequence>
+      <element name="getDate_of_birthReturn" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMiddle_initial">
+    <complexType/>
+   </element>
+   <element name="getMiddle_initialResponse">
+    <complexType>
+     <sequence>
+      <element name="getMiddle_initialReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmployee_id">
+    <complexType>
+     <sequence>
+      <element name="employee_id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmployee_idResponse">
+    <complexType/>
+   </element>
+   <element name="setWork_description">
+    <complexType>
+     <sequence>
+      <element name="work_description" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setWork_descriptionResponse">
+    <complexType/>
+   </element>
+   <element name="setMiddle_initial">
+    <complexType>
+     <sequence>
+      <element name="middle_initial" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setMiddle_initialResponse">
+    <complexType/>
+   </element>
+   <element name="setLast_updated">
+    <complexType>
+     <sequence>
+      <element name="last_updated" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLast_updatedResponse">
+    <complexType/>
+   </element>
+   <element name="setCreation_date">
+    <complexType>
+     <sequence>
+      <element name="creation_date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setCreation_dateResponse">
+    <complexType/>
+   </element>
+   <element name="setLast_updated_by">
+    <complexType>
+     <sequence>
+      <element name="last_updated_by" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLast_updated_byResponse">
+    <complexType/>
+   </element>
+   <element name="setDate_of_birth">
+    <complexType>
+     <sequence>
+      <element name="date_of_birth" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setDate_of_birthResponse">
+    <complexType/>
+   </element>
+   <element name="getCreation_date">
+    <complexType/>
+   </element>
+   <element name="getCreation_dateResponse">
+    <complexType>
+     <sequence>
+      <element name="getCreation_dateReturn" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getFirst_name">
+    <complexType/>
+   </element>
+   <element name="getFirst_nameResponse">
+    <complexType>
+     <sequence>
+      <element name="getFirst_nameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getLast_name">
+    <complexType/>
+   </element>
+   <element name="getLast_nameResponse">
+    <complexType>
+     <sequence>
+      <element name="getLast_nameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGender">
+    <complexType/>
+   </element>
+   <element name="getGenderResponse">
+    <complexType>
+     <sequence>
+      <element name="getGenderReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getContact_no">
+    <complexType/>
+   </element>
+   <element name="getContact_noResponse">
+    <complexType>
+     <sequence>
+      <element name="getContact_noReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getZipcode">
+    <complexType/>
+   </element>
+   <element name="getZipcodeResponse">
+    <complexType>
+     <sequence>
+      <element name="getZipcodeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCity">
+    <complexType/>
+   </element>
+   <element name="getCityResponse">
+    <complexType>
+     <sequence>
+      <element name="getCityReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getId_no">
+    <complexType/>
+   </element>
+   <element name="getId_noResponse">
+    <complexType>
+     <sequence>
+      <element name="getId_noReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getId_type">
+    <complexType/>
+   </element>
+   <element name="getId_typeResponse">
+    <complexType>
+     <sequence>
+      <element name="getId_typeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHire_date">
+    <complexType>
+     <sequence>
+      <element name="hire_date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setHire_dateResponse">
+    <complexType/>
+   </element>
+   <element name="setPerson_id">
+    <complexType>
+     <sequence>
+      <element name="person_id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setPerson_idResponse">
+    <complexType/>
+   </element>
+   <element name="setCity">
+    <complexType>
+     <sequence>
+      <element name="city" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setCityResponse">
+    <complexType/>
+   </element>
+   <element name="setGender">
+    <complexType>
+     <sequence>
+      <element name="gender" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setGenderResponse">
+    <complexType/>
+   </element>
+   <element name="setAddress">
+    <complexType>
+     <sequence>
+      <element name="address" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setAddressResponse">
+    <complexType/>
+   </element>
+   <element name="setZipcode">
+    <complexType>
+     <sequence>
+      <element name="zipcode" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setZipcodeResponse">
+    <complexType/>
+   </element>
+   <element name="getPerson_id">
+    <complexType/>
+   </element>
+   <element name="getPerson_idResponse">
+    <complexType>
+     <sequence>
+      <element name="getPerson_idReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLast_name">
+    <complexType>
+     <sequence>
+      <element name="last_name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLast_nameResponse">
+    <complexType/>
+   </element>
+   <element name="setContact_no">
+    <complexType>
+     <sequence>
+      <element name="contact_no" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setContact_noResponse">
+    <complexType/>
+   </element>
+   <element name="setId_no">
+    <complexType>
+     <sequence>
+      <element name="id_no" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setId_noResponse">
+    <complexType/>
+   </element>
+   <element name="setId_type">
+    <complexType>
+     <sequence>
+      <element name="id_type" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setId_typeResponse">
+    <complexType/>
+   </element>
+   <element name="setCreated_by">
+    <complexType>
+     <sequence>
+      <element name="created_by" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setCreated_byResponse">
+    <complexType/>
+   </element>
+   <element name="getCreated_by">
+    <complexType/>
+   </element>
+   <element name="getCreated_byResponse">
+    <complexType>
+     <sequence>
+      <element name="getCreated_byReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEnd_date">
+    <complexType/>
+   </element>
+   <element name="getEnd_dateResponse">
+    <complexType>
+     <sequence>
+      <element name="getEnd_dateReturn" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHire_date">
+    <complexType/>
+   </element>
+   <element name="getHire_dateResponse">
+    <complexType>
+     <sequence>
+      <element name="getHire_dateReturn" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEnd_date">
+    <complexType>
+     <sequence>
+      <element name="end_date" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEnd_dateResponse">
+    <complexType/>
+   </element>
+   <element name="setFirst_name">
+    <complexType>
+     <sequence>
+      <element name="first_name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setFirst_nameResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getPerson_idResponse">
+
+      <wsdl:part element="impl:getPerson_idResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGenderRequest">
+
+      <wsdl:part element="impl:getGender" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCityResponse">
+
+      <wsdl:part element="impl:getCityResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFirst_nameResponse">
+
+      <wsdl:part element="impl:getFirst_nameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLast_updatedRequest">
+
+      <wsdl:part element="impl:getLast_updated" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDate_of_birthResponse">
+
+      <wsdl:part element="impl:getDate_of_birthResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAddressRequest">
+
+      <wsdl:part element="impl:getAddress" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateRequest">
+
+      <wsdl:part element="impl:getState" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFirst_nameRequest">
+
+      <wsdl:part element="impl:getFirst_name" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFirst_nameResponse">
+
+      <wsdl:part element="impl:setFirst_nameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setContact_noRequest">
+
+      <wsdl:part element="impl:setContact_no" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCreation_dateResponse">
+
+      <wsdl:part element="impl:setCreation_dateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLast_updated_byRequest">
+
+      <wsdl:part element="impl:setLast_updated_by" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDate_of_birthRequest">
+
+      <wsdl:part element="impl:setDate_of_birth" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmployee_idResponse">
+
+      <wsdl:part element="impl:setEmployee_idResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setId_typeRequest">
+
+      <wsdl:part element="impl:setId_type" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPerson_idResponse">
+
+      <wsdl:part element="impl:setPerson_idResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getId_noRequest">
+
+      <wsdl:part element="impl:getId_no" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCreation_dateRequest">
+
+      <wsdl:part element="impl:getCreation_date" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setGenderResponse">
+
+      <wsdl:part element="impl:setGenderResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmployee_idRequest">
+
+      <wsdl:part element="impl:getEmployee_id" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLast_updated_byResponse">
+
+      <wsdl:part element="impl:getLast_updated_byResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMiddle_initialResponse">
+
+      <wsdl:part element="impl:setMiddle_initialResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLast_updatedResponse">
+
+      <wsdl:part element="impl:setLast_updatedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLast_updated_byResponse">
+
+      <wsdl:part element="impl:setLast_updated_byResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContact_noResponse">
+
+      <wsdl:part element="impl:getContact_noResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setAddressResponse">
+
+      <wsdl:part element="impl:setAddressResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFirst_nameRequest">
+
+      <wsdl:part element="impl:setFirst_name" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmployee_idResponse">
+
+      <wsdl:part element="impl:getEmployee_idResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmployee_idRequest">
+
+      <wsdl:part element="impl:setEmployee_id" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEnd_dateResponse">
+
+      <wsdl:part element="impl:getEnd_dateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPerson_idRequest">
+
+      <wsdl:part element="impl:setPerson_id" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPerson_idRequest">
+
+      <wsdl:part element="impl:getPerson_id" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHire_dateRequest">
+
+      <wsdl:part element="impl:setHire_date" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getZipcodeResponse">
+
+      <wsdl:part element="impl:getZipcodeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLast_nameResponse">
+
+      <wsdl:part element="impl:getLast_nameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLast_updated_byRequest">
+
+      <wsdl:part element="impl:getLast_updated_by" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getId_typeResponse">
+
+      <wsdl:part element="impl:getId_typeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCityRequest">
+
+      <wsdl:part element="impl:getCity" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPositionRequest">
+
+      <wsdl:part element="impl:setPosition" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setAddressRequest">
+
+      <wsdl:part element="impl:setAddress" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setStateResponse">
+
+      <wsdl:part element="impl:setStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getId_noResponse">
+
+      <wsdl:part element="impl:getId_noResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCreated_byResponse">
+
+      <wsdl:part element="impl:setCreated_byResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setStateRequest">
+
+      <wsdl:part element="impl:setState" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWork_descriptionRequest">
+
+      <wsdl:part element="impl:getWork_description" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGenderResponse">
+
+      <wsdl:part element="impl:getGenderResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMiddle_initialRequest">
+
+      <wsdl:part element="impl:setMiddle_initial" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHire_dateResponse">
+
+      <wsdl:part element="impl:getHire_dateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDate_of_birthRequest">
+
+      <wsdl:part element="impl:getDate_of_birth" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCityResponse">
+
+      <wsdl:part element="impl:setCityResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPositionResponse">
+
+      <wsdl:part element="impl:getPositionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setZipcodeRequest">
+
+      <wsdl:part element="impl:setZipcode" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getId_typeRequest">
+
+      <wsdl:part element="impl:getId_type" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContact_noRequest">
+
+      <wsdl:part element="impl:getContact_no" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPositionResponse">
+
+      <wsdl:part element="impl:setPositionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setWork_descriptionRequest">
+
+      <wsdl:part element="impl:setWork_description" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHire_dateRequest">
+
+      <wsdl:part element="impl:getHire_date" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCreated_byRequest">
+
+      <wsdl:part element="impl:setCreated_by" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAddressResponse">
+
+      <wsdl:part element="impl:getAddressResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHire_dateResponse">
+
+      <wsdl:part element="impl:setHire_dateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setWork_descriptionResponse">
+
+      <wsdl:part element="impl:setWork_descriptionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setContact_noResponse">
+
+      <wsdl:part element="impl:setContact_noResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEnd_dateRequest">
+
+      <wsdl:part element="impl:setEnd_date" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setZipcodeResponse">
+
+      <wsdl:part element="impl:setZipcodeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCreated_byRequest">
+
+      <wsdl:part element="impl:getCreated_by" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getZipcodeRequest">
+
+      <wsdl:part element="impl:getZipcode" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setGenderRequest">
+
+      <wsdl:part element="impl:setGender" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCreation_dateRequest">
+
+      <wsdl:part element="impl:setCreation_date" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setId_noRequest">
+
+      <wsdl:part element="impl:setId_no" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMiddle_initialRequest">
+
+      <wsdl:part element="impl:getMiddle_initial" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setId_noResponse">
+
+      <wsdl:part element="impl:setId_noResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLast_nameRequest">
+
+      <wsdl:part element="impl:setLast_name" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPositionRequest">
+
+      <wsdl:part element="impl:getPosition" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDate_of_birthResponse">
+
+      <wsdl:part element="impl:setDate_of_birthResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLast_nameRequest">
+
+      <wsdl:part element="impl:getLast_name" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLast_nameResponse">
+
+      <wsdl:part element="impl:setLast_nameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLast_updatedResponse">
+
+      <wsdl:part element="impl:getLast_updatedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCreation_dateResponse">
+
+      <wsdl:part element="impl:getCreation_dateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setId_typeResponse">
+
+      <wsdl:part element="impl:setId_typeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCreated_byResponse">
+
+      <wsdl:part element="impl:getCreated_byResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWork_descriptionResponse">
+
+      <wsdl:part element="impl:getWork_descriptionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateResponse">
+
+      <wsdl:part element="impl:getStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEnd_dateResponse">
+
+      <wsdl:part element="impl:setEnd_dateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLast_updatedRequest">
+
+      <wsdl:part element="impl:setLast_updated" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEnd_dateRequest">
+
+      <wsdl:part element="impl:getEnd_date" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCityRequest">
+
+      <wsdl:part element="impl:setCity" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMiddle_initialResponse">
+
+      <wsdl:part element="impl:getMiddle_initialResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="PersonBean">
+
+      <wsdl:operation name="getAddress">
+
+         <wsdl:input message="impl:getAddressRequest" name="getAddressRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAddressResponse" name="getAddressResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getState">
+
+         <wsdl:input message="impl:getStateRequest" name="getStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getStateResponse" name="getStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setState">
+
+         <wsdl:input message="impl:setStateRequest" name="setStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setStateResponse" name="setStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPosition">
+
+         <wsdl:input message="impl:getPositionRequest" name="getPositionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getPositionResponse" name="getPositionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPosition">
+
+         <wsdl:input message="impl:setPositionRequest" name="setPositionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setPositionResponse" name="setPositionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLast_updated_by">
+
+         <wsdl:input message="impl:getLast_updated_byRequest" name="getLast_updated_byRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLast_updated_byResponse" name="getLast_updated_byResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLast_updated">
+
+         <wsdl:input message="impl:getLast_updatedRequest" name="getLast_updatedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLast_updatedResponse" name="getLast_updatedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWork_description">
+
+         <wsdl:input message="impl:getWork_descriptionRequest" name="getWork_descriptionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getWork_descriptionResponse" name="getWork_descriptionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmployee_id">
+
+         <wsdl:input message="impl:getEmployee_idRequest" name="getEmployee_idRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEmployee_idResponse" name="getEmployee_idResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDate_of_birth">
+
+         <wsdl:input message="impl:getDate_of_birthRequest" name="getDate_of_birthRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDate_of_birthResponse" name="getDate_of_birthResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMiddle_initial">
+
+         <wsdl:input message="impl:getMiddle_initialRequest" name="getMiddle_initialRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMiddle_initialResponse" name="getMiddle_initialResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmployee_id">
+
+         <wsdl:input message="impl:setEmployee_idRequest" name="setEmployee_idRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setEmployee_idResponse" name="setEmployee_idResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWork_description">
+
+         <wsdl:input message="impl:setWork_descriptionRequest" name="setWork_descriptionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setWork_descriptionResponse" name="setWork_descriptionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMiddle_initial">
+
+         <wsdl:input message="impl:setMiddle_initialRequest" name="setMiddle_initialRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setMiddle_initialResponse" name="setMiddle_initialResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLast_updated">
+
+         <wsdl:input message="impl:setLast_updatedRequest" name="setLast_updatedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setLast_updatedResponse" name="setLast_updatedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCreation_date">
+
+         <wsdl:input message="impl:setCreation_dateRequest" name="setCreation_dateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setCreation_dateResponse" name="setCreation_dateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLast_updated_by">
+
+         <wsdl:input message="impl:setLast_updated_byRequest" name="setLast_updated_byRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setLast_updated_byResponse" name="setLast_updated_byResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDate_of_birth">
+
+         <wsdl:input message="impl:setDate_of_birthRequest" name="setDate_of_birthRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setDate_of_birthResponse" name="setDate_of_birthResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCreation_date">
+
+         <wsdl:input message="impl:getCreation_dateRequest" name="getCreation_dateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCreation_dateResponse" name="getCreation_dateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFirst_name">
+
+         <wsdl:input message="impl:getFirst_nameRequest" name="getFirst_nameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getFirst_nameResponse" name="getFirst_nameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLast_name">
+
+         <wsdl:input message="impl:getLast_nameRequest" name="getLast_nameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLast_nameResponse" name="getLast_nameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGender">
+
+         <wsdl:input message="impl:getGenderRequest" name="getGenderRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGenderResponse" name="getGenderResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContact_no">
+
+         <wsdl:input message="impl:getContact_noRequest" name="getContact_noRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getContact_noResponse" name="getContact_noResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getZipcode">
+
+         <wsdl:input message="impl:getZipcodeRequest" name="getZipcodeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getZipcodeResponse" name="getZipcodeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCity">
+
+         <wsdl:input message="impl:getCityRequest" name="getCityRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCityResponse" name="getCityResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId_no">
+
+         <wsdl:input message="impl:getId_noRequest" name="getId_noRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getId_noResponse" name="getId_noResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId_type">
+
+         <wsdl:input message="impl:getId_typeRequest" name="getId_typeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getId_typeResponse" name="getId_typeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHire_date">
+
+         <wsdl:input message="impl:setHire_dateRequest" name="setHire_dateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setHire_dateResponse" name="setHire_dateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPerson_id">
+
+         <wsdl:input message="impl:setPerson_idRequest" name="setPerson_idRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setPerson_idResponse" name="setPerson_idResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCity">
+
+         <wsdl:input message="impl:setCityRequest" name="setCityRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setCityResponse" name="setCityResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setGender">
+
+         <wsdl:input message="impl:setGenderRequest" name="setGenderRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setGenderResponse" name="setGenderResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAddress">
+
+         <wsdl:input message="impl:setAddressRequest" name="setAddressRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setAddressResponse" name="setAddressResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setZipcode">
+
+         <wsdl:input message="impl:setZipcodeRequest" name="setZipcodeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setZipcodeResponse" name="setZipcodeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPerson_id">
+
+         <wsdl:input message="impl:getPerson_idRequest" name="getPerson_idRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getPerson_idResponse" name="getPerson_idResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLast_name">
+
+         <wsdl:input message="impl:setLast_nameRequest" name="setLast_nameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setLast_nameResponse" name="setLast_nameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setContact_no">
+
+         <wsdl:input message="impl:setContact_noRequest" name="setContact_noRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setContact_noResponse" name="setContact_noResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId_no">
+
+         <wsdl:input message="impl:setId_noRequest" name="setId_noRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setId_noResponse" name="setId_noResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId_type">
+
+         <wsdl:input message="impl:setId_typeRequest" name="setId_typeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setId_typeResponse" name="setId_typeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCreated_by">
+
+         <wsdl:input message="impl:setCreated_byRequest" name="setCreated_byRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setCreated_byResponse" name="setCreated_byResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCreated_by">
+
+         <wsdl:input message="impl:getCreated_byRequest" name="getCreated_byRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCreated_byResponse" name="getCreated_byResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEnd_date">
+
+         <wsdl:input message="impl:getEnd_dateRequest" name="getEnd_dateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEnd_dateResponse" name="getEnd_dateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHire_date">
+
+         <wsdl:input message="impl:getHire_dateRequest" name="getHire_dateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHire_dateResponse" name="getHire_dateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEnd_date">
+
+         <wsdl:input message="impl:setEnd_dateRequest" name="setEnd_dateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setEnd_dateResponse" name="setEnd_dateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFirst_name">
+
+         <wsdl:input message="impl:setFirst_nameRequest" name="setFirst_nameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setFirst_nameResponse" name="setFirst_nameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="PersonBeanSoapBinding" type="impl:PersonBean">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getAddress">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAddressRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAddressResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPosition">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPositionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPositionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPosition">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPositionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPositionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLast_updated_by">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLast_updated_byRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLast_updated_byResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLast_updated">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLast_updatedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLast_updatedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWork_description">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWork_descriptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWork_descriptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmployee_id">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEmployee_idRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEmployee_idResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDate_of_birth">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDate_of_birthRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDate_of_birthResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMiddle_initial">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMiddle_initialRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMiddle_initialResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmployee_id">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEmployee_idRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEmployee_idResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWork_description">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setWork_descriptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setWork_descriptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMiddle_initial">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setMiddle_initialRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setMiddle_initialResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLast_updated">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLast_updatedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLast_updatedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCreation_date">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCreation_dateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCreation_dateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLast_updated_by">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLast_updated_byRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLast_updated_byResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDate_of_birth">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDate_of_birthRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDate_of_birthResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCreation_date">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCreation_dateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCreation_dateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFirst_name">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFirst_nameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFirst_nameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLast_name">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLast_nameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLast_nameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGender">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGenderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGenderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContact_no">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getContact_noRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getContact_noResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getZipcode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getZipcodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getZipcodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId_no">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getId_noRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getId_noResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId_type">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getId_typeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getId_typeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHire_date">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHire_dateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHire_dateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPerson_id">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPerson_idRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPerson_idResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setGender">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setGenderRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setGenderResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAddress">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setAddressRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setAddressResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setZipcode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setZipcodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setZipcodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPerson_id">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPerson_idRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPerson_idResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLast_name">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLast_nameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLast_nameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setContact_no">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setContact_noRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setContact_noResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId_no">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setId_noRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setId_noResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId_type">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setId_typeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setId_typeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCreated_by">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCreated_byRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCreated_byResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCreated_by">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCreated_byRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCreated_byResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEnd_date">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEnd_dateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEnd_dateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHire_date">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHire_dateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHire_dateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEnd_date">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEnd_dateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEnd_dateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFirst_name">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFirst_nameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFirst_nameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="PersonBeanService">
+
+      <wsdl:port binding="impl:PersonBeanSoapBinding" name="PersonBean">
+
+         <wsdlsoap:address location="http://localhost:8080/AirlineManagementSystem/services/PersonBean"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,231 @@
+<ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:globalConfiguration>
+  <ns1:parameter name="sendMultiRefs" value="true"/>
+  <ns1:parameter name="disablePrettyXML" value="true"/>
+  <ns1:parameter name="adminPassword" value="admin"/>
+  <ns1:parameter name="attachments.Directory" value="C:\apache-tomcat-6.0.37\wtpwebapps\AirlineManagementSystem\WEB-INF\attachments"/>
+  <ns1:parameter name="dotNetSoapEncFix" value="true"/>
+  <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <ns1:parameter name="sendXMLDeclaration" value="true"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:requestFlow>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="session"/>
+   </ns1:handler>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="request"/>
+    <ns1:parameter name="extension" value=".jwr"/>
+   </ns1:handler>
+  </ns1:requestFlow>
+ </ns1:globalConfiguration>
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <ns1:service name="PersonBean" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="getAddress" qname="ns1:getAddress" returnQName="ns1:getAddressReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
+  <ns1:operation name="getState" qname="ns2:getState" returnQName="ns2:getStateReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setState" qname="ns3:setState" soapAction="" xmlns:ns3="http://beanFiles">
+   <ns1:parameter qname="ns3:state" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getPosition" qname="ns4:getPosition" returnQName="ns4:getPositionReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setPosition" qname="ns5:setPosition" soapAction="" xmlns:ns5="http://beanFiles">
+   <ns1:parameter qname="ns5:position" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getLast_updated_by" qname="ns6:getLast_updated_by" returnQName="ns6:getLast_updated_byReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getLast_updated" qname="ns7:getLast_updated" returnQName="ns7:getLast_updatedReturn" returnType="xsd:dateTime" soapAction="" xmlns:ns7="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getWork_description" qname="ns8:getWork_description" returnQName="ns8:getWork_descriptionReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getEmployee_id" qname="ns9:getEmployee_id" returnQName="ns9:getEmployee_idReturn" returnType="xsd:string" soapAction="" xmlns:ns9="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getDate_of_birth" qname="ns10:getDate_of_birth" returnQName="ns10:getDate_of_birthReturn" returnType="xsd:dateTime" soapAction="" xmlns:ns10="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getMiddle_initial" qname="ns11:getMiddle_initial" returnQName="ns11:getMiddle_initialReturn" returnType="xsd:string" soapAction="" xmlns:ns11="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setEmployee_id" qname="ns12:setEmployee_id" soapAction="" xmlns:ns12="http://beanFiles">
+   <ns1:parameter qname="ns12:employee_id" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setWork_description" qname="ns13:setWork_description" soapAction="" xmlns:ns13="http://beanFiles">
+   <ns1:parameter qname="ns13:work_description" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setMiddle_initial" qname="ns14:setMiddle_initial" soapAction="" xmlns:ns14="http://beanFiles">
+   <ns1:parameter qname="ns14:middle_initial" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setLast_updated" qname="ns15:setLast_updated" soapAction="" xmlns:ns15="http://beanFiles">
+   <ns1:parameter qname="ns15:last_updated" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setCreation_date" qname="ns16:setCreation_date" soapAction="" xmlns:ns16="http://beanFiles">
+   <ns1:parameter qname="ns16:creation_date" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setLast_updated_by" qname="ns17:setLast_updated_by" soapAction="" xmlns:ns17="http://beanFiles">
+   <ns1:parameter qname="ns17:last_updated_by" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setDate_of_birth" qname="ns18:setDate_of_birth" soapAction="" xmlns:ns18="http://beanFiles">
+   <ns1:parameter qname="ns18:date_of_birth" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getCreation_date" qname="ns19:getCreation_date" returnQName="ns19:getCreation_dateReturn" returnType="xsd:dateTime" soapAction="" xmlns:ns19="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getFirst_name" qname="ns20:getFirst_name" returnQName="ns20:getFirst_nameReturn" returnType="xsd:string" soapAction="" xmlns:ns20="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getLast_name" qname="ns21:getLast_name" returnQName="ns21:getLast_nameReturn" returnType="xsd:string" soapAction="" xmlns:ns21="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getGender" qname="ns22:getGender" returnQName="ns22:getGenderReturn" returnType="xsd:string" soapAction="" xmlns:ns22="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getContact_no" qname="ns23:getContact_no" returnQName="ns23:getContact_noReturn" returnType="xsd:string" soapAction="" xmlns:ns23="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getZipcode" qname="ns24:getZipcode" returnQName="ns24:getZipcodeReturn" returnType="xsd:string" soapAction="" xmlns:ns24="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getCity" qname="ns25:getCity" returnQName="ns25:getCityReturn" returnType="xsd:string" soapAction="" xmlns:ns25="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getId_no" qname="ns26:getId_no" returnQName="ns26:getId_noReturn" returnType="xsd:string" soapAction="" xmlns:ns26="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getId_type" qname="ns27:getId_type" returnQName="ns27:getId_typeReturn" returnType="xsd:string" soapAction="" xmlns:ns27="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setHire_date" qname="ns28:setHire_date" soapAction="" xmlns:ns28="http://beanFiles">
+   <ns1:parameter qname="ns28:hire_date" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setPerson_id" qname="ns29:setPerson_id" soapAction="" xmlns:ns29="http://beanFiles">
+   <ns1:parameter qname="ns29:person_id" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setCity" qname="ns30:setCity" soapAction="" xmlns:ns30="http://beanFiles">
+   <ns1:parameter qname="ns30:city" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setGender" qname="ns31:setGender" soapAction="" xmlns:ns31="http://beanFiles">
+   <ns1:parameter qname="ns31:gender" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setAddress" qname="ns32:setAddress" soapAction="" xmlns:ns32="http://beanFiles">
+   <ns1:parameter qname="ns32:address" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setZipcode" qname="ns33:setZipcode" soapAction="" xmlns:ns33="http://beanFiles">
+   <ns1:parameter qname="ns33:zipcode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getPerson_id" qname="ns34:getPerson_id" returnQName="ns34:getPerson_idReturn" returnType="xsd:int" soapAction="" xmlns:ns34="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setLast_name" qname="ns35:setLast_name" soapAction="" xmlns:ns35="http://beanFiles">
+   <ns1:parameter qname="ns35:last_name" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setContact_no" qname="ns36:setContact_no" soapAction="" xmlns:ns36="http://beanFiles">
+   <ns1:parameter qname="ns36:contact_no" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setId_no" qname="ns37:setId_no" soapAction="" xmlns:ns37="http://beanFiles">
+   <ns1:parameter qname="ns37:id_no" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setId_type" qname="ns38:setId_type" soapAction="" xmlns:ns38="http://beanFiles">
+   <ns1:parameter qname="ns38:id_type" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setCreated_by" qname="ns39:setCreated_by" soapAction="" xmlns:ns39="http://beanFiles">
+   <ns1:parameter qname="ns39:created_by" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getCreated_by" qname="ns40:getCreated_by" returnQName="ns40:getCreated_byReturn" returnType="xsd:string" soapAction="" xmlns:ns40="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getEnd_date" qname="ns41:getEnd_date" returnQName="ns41:getEnd_dateReturn" returnType="xsd:dateTime" soapAction="" xmlns:ns41="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getHire_date" qname="ns42:getHire_date" returnQName="ns42:getHire_dateReturn" returnType="xsd:dateTime" soapAction="" xmlns:ns42="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setEnd_date" qname="ns43:setEnd_date" soapAction="" xmlns:ns43="http://beanFiles">
+   <ns1:parameter qname="ns43:end_date" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setFirst_name" qname="ns44:setFirst_name" soapAction="" xmlns:ns44="http://beanFiles">
+   <ns1:parameter qname="ns44:first_name" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getState getContact_no setLast_updated_by getLast_updated setId_type getPosition setWork_description setCreation_date getCreated_by getWork_description setGender getEnd_date setDate_of_birth setPerson_id setState setLast_updated getEmployee_id setLast_name getFirst_name getCity setEmployee_id getAddress getId_no getCreation_date setCity setHire_date setMiddle_initial getLast_name getDate_of_birth getGender setAddress setPosition getMiddle_initial getZipcode setId_no getPerson_id getId_type setEnd_date setZipcode setContact_no getLast_updated_by getHire_date setFirst_name setCreated_by"/>
+  <ns1:parameter name="wsdlPortType" value="PersonBean"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://beanFiles"/>
+  <ns1:parameter name="wsdlServicePort" value="PersonBean"/>
+  <ns1:parameter name="className" value="beanFiles.PersonBean"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://beanFiles"/>
+  <ns1:parameter name="wsdlServiceElement" value="PersonBeanService"/>
+ </ns1:service>
+ <ns1:service name="AdminService" provider="java:MSG">
+  <ns1:parameter name="allowedMethods" value="AdminService"/>
+  <ns1:parameter name="enableRemoteAdmin" value="false"/>
+  <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
+ </ns1:service>
+ <ns1:service name="EmployeeHelper" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="createNewEmployee" qname="ns45:createNewEmployee" returnQName="ns45:createNewEmployeeReturn" returnType="xsd:boolean" soapAction="" xmlns:ns45="http://Employee.AirlineSystem.project" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns45:empObj" type="ns46:PersonBean" xmlns:ns46="http://beanFiles"/>
+  </ns1:operation>
+  <ns1:operation name="updDeleteEmployee" qname="ns47:updDeleteEmployee" returnQName="ns47:updDeleteEmployeeReturn" returnType="xsd:boolean" soapAction="" xmlns:ns47="http://Employee.AirlineSystem.project" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns47:empObj" type="ns48:PersonBean" xmlns:ns48="http://beanFiles"/>
+   <ns1:parameter qname="ns47:emp" type="xsd:string"/>
+   <ns1:parameter qname="ns47:isUpdate" type="xsd:boolean"/>
+  </ns1:operation>
+  <ns1:operation name="searchEmployee" qname="ns49:searchEmployee" returnQName="ns49:searchEmployeeReturn" returnType="ns50:PersonBean" soapAction="" xmlns:ns49="http://Employee.AirlineSystem.project" xmlns:ns50="http://beanFiles">
+   <ns1:parameter qname="ns49:empObj" type="ns50:PersonBean"/>
+  </ns1:operation>
+  <ns1:operation name="listEmployee" qname="ns51:listEmployee" returnQName="ns51:listEmployeeReturn" returnType="ns52:PersonBean" soapAction="" xmlns:ns51="http://Employee.AirlineSystem.project" xmlns:ns52="http://beanFiles"/>
+  <ns1:parameter name="allowedMethods" value="listEmployee searchEmployee createNewEmployee updDeleteEmployee"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="EmployeeHelper"/>
+  <ns1:parameter name="className" value="project.AirlineSystem.Employee.EmployeeHelper"/>
+  <ns1:parameter name="wsdlServicePort" value="EmployeeHelper"/>
+  <ns1:parameter name="schemaQualified" value="http://Employee.AirlineSystem.project,http://beanFiles"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://Employee.AirlineSystem.project"/>
+  <ns1:parameter name="wsdlServiceElement" value="EmployeeHelperService"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns53:PersonBean" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:beanFiles.PersonBean" xmlns:ns53="http://beanFiles"/>
+ </ns1:service>
+ <ns1:service name="Version" provider="java:RPC">
+  <ns1:parameter name="allowedMethods" value="getVersion"/>
+  <ns1:parameter name="className" value="org.apache.axis.Version"/>
+ </ns1:service>
+ <ns1:service name="EmployeeBean" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getAddress" qname="ns54:getAddress" returnQName="ns54:getAddressReturn" returnType="xsd:string" soapAction="" xmlns:ns54="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getState" qname="ns55:getState" returnQName="ns55:getStateReturn" returnType="xsd:string" soapAction="" xmlns:ns55="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setState" qname="ns56:setState" soapAction="" xmlns:ns56="http://beanFiles">
+   <ns1:parameter qname="ns56:state" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getPosition" qname="ns57:getPosition" returnQName="ns57:getPositionReturn" returnType="xsd:string" soapAction="" xmlns:ns57="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setPosition" qname="ns58:setPosition" soapAction="" xmlns:ns58="http://beanFiles">
+   <ns1:parameter qname="ns58:position" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setAddress" qname="ns59:setAddress" soapAction="" xmlns:ns59="http://beanFiles">
+   <ns1:parameter qname="ns59:address" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setWorkDescription" qname="ns60:setWorkDescription" soapAction="" xmlns:ns60="http://beanFiles">
+   <ns1:parameter qname="ns60:workDescription" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getWorkDescription" qname="ns61:getWorkDescription" returnQName="ns61:getWorkDescriptionReturn" returnType="xsd:string" soapAction="" xmlns:ns61="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setDateOfBirth" qname="ns62:setDateOfBirth" soapAction="" xmlns:ns62="http://beanFiles">
+   <ns1:parameter qname="ns62:dateOfBirth" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getDateOfBirth" qname="ns63:getDateOfBirth" returnQName="ns63:getDateOfBirthReturn" returnType="xsd:string" soapAction="" xmlns:ns63="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setLastName" qname="ns64:setLastName" soapAction="" xmlns:ns64="http://beanFiles">
+   <ns1:parameter qname="ns64:lastName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getMiddleName" qname="ns65:getMiddleName" returnQName="ns65:getMiddleNameReturn" returnType="xsd:string" soapAction="" xmlns:ns65="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getLastName" qname="ns66:getLastName" returnQName="ns66:getLastNameReturn" returnType="xsd:string" soapAction="" xmlns:ns66="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setMiddleName" qname="ns67:setMiddleName" soapAction="" xmlns:ns67="http://beanFiles">
+   <ns1:parameter qname="ns67:middleName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setEmployeeId" qname="ns68:setEmployeeId" soapAction="" xmlns:ns68="http://beanFiles">
+   <ns1:parameter qname="ns68:employeeId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getCity" qname="ns69:getCity" returnQName="ns69:getCityReturn" returnType="xsd:string" soapAction="" xmlns:ns69="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setCity" qname="ns70:setCity" soapAction="" xmlns:ns70="http://beanFiles">
+   <ns1:parameter qname="ns70:city" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setZipCode" qname="ns71:setZipCode" soapAction="" xmlns:ns71="http://beanFiles">
+   <ns1:parameter qname="ns71:zipCode" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getZipCode" qname="ns72:getZipCode" returnQName="ns72:getZipCodeReturn" returnType="xsd:string" soapAction="" xmlns:ns72="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setFirstName" qname="ns73:setFirstName" soapAction="" xmlns:ns73="http://beanFiles">
+   <ns1:parameter qname="ns73:firstName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getFirstName" qname="ns74:getFirstName" returnQName="ns74:getFirstNameReturn" returnType="xsd:string" soapAction="" xmlns:ns74="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getHireDate" qname="ns75:getHireDate" returnQName="ns75:getHireDateReturn" returnType="xsd:string" soapAction="" xmlns:ns75="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setHireDate" qname="ns76:setHireDate" soapAction="" xmlns:ns76="http://beanFiles">
+   <ns1:parameter qname="ns76:hireDate" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getEmployeeId" qname="ns77:getEmployeeId" returnQName="ns77:getEmployeeIdReturn" returnType="xsd:string" soapAction="" xmlns:ns77="http://beanFiles" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:parameter name="allowedMethods" value="getState setCity setHireDate getMiddleName getZipCode setPosition setAddress setDateOfBirth getPosition setLastName getHireDate getLastName setZipCode getWorkDescription setWorkDescription getDateOfBirth setFirstName setMiddleName getEmployeeId setEmployeeId setState getFirstName getCity getAddress"/>
+  <ns1:parameter name="wsdlPortType" value="EmployeeBean"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://beanFiles"/>
+  <ns1:parameter name="wsdlServicePort" value="EmployeeBean"/>
+  <ns1:parameter name="className" value="beanFiles.EmployeeBean"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://beanFiles"/>
+  <ns1:parameter name="wsdlServiceElement" value="EmployeeBeanService"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+   <ns1:handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </ns1:transport>
+ <ns1:transport name="local">
+  <ns1:responseFlow>
+   <ns1:handler type="LocalResponder"/>
+  </ns1:responseFlow>
+ </ns1:transport>
+</ns1:deployment>

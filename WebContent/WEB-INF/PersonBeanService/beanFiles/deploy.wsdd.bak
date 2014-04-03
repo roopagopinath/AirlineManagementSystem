@@ -1,0 +1,136 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PersonBeanService WSDL service -->
+
+  <service name="PersonBean" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://beanFiles"/>
+      <parameter name="wsdlServiceElement" value="PersonBeanService"/>
+      <parameter name="schemaQualified" value="http://beanFiles"/>
+      <parameter name="wsdlServicePort" value="PersonBean"/>
+      <parameter name="className" value="beanFiles.PersonBeanSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="PersonBean"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getAddress" qname="operNS:getAddress" xmlns:operNS="http://beanFiles" returnQName="retNS:getAddressReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getState" qname="operNS:getState" xmlns:operNS="http://beanFiles" returnQName="retNS:getStateReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setState" qname="operNS:setState" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:state" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getPosition" qname="operNS:getPosition" xmlns:operNS="http://beanFiles" returnQName="retNS:getPositionReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setPosition" qname="operNS:setPosition" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:position" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getLast_updated_by" qname="operNS:getLast_updated_by" xmlns:operNS="http://beanFiles" returnQName="retNS:getLast_updated_byReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getLast_updated" qname="operNS:getLast_updated" xmlns:operNS="http://beanFiles" returnQName="retNS:getLast_updatedReturn" xmlns:retNS="http://beanFiles" returnType="rtns:dateTime" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getWork_description" qname="operNS:getWork_description" xmlns:operNS="http://beanFiles" returnQName="retNS:getWork_descriptionReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getEmployee_id" qname="operNS:getEmployee_id" xmlns:operNS="http://beanFiles" returnQName="retNS:getEmployee_idReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getDate_of_birth" qname="operNS:getDate_of_birth" xmlns:operNS="http://beanFiles" returnQName="retNS:getDate_of_birthReturn" xmlns:retNS="http://beanFiles" returnType="rtns:dateTime" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getMiddle_initial" qname="operNS:getMiddle_initial" xmlns:operNS="http://beanFiles" returnQName="retNS:getMiddle_initialReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setEmployee_id" qname="operNS:setEmployee_id" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:employee_id" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setWork_description" qname="operNS:setWork_description" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:work_description" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setMiddle_initial" qname="operNS:setMiddle_initial" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:middle_initial" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setLast_updated" qname="operNS:setLast_updated" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:last_updated" xmlns:pns="http://beanFiles" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setCreation_date" qname="operNS:setCreation_date" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:creation_date" xmlns:pns="http://beanFiles" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setLast_updated_by" qname="operNS:setLast_updated_by" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:last_updated_by" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setDate_of_birth" qname="operNS:setDate_of_birth" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:date_of_birth" xmlns:pns="http://beanFiles" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCreation_date" qname="operNS:getCreation_date" xmlns:operNS="http://beanFiles" returnQName="retNS:getCreation_dateReturn" xmlns:retNS="http://beanFiles" returnType="rtns:dateTime" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getFirst_name" qname="operNS:getFirst_name" xmlns:operNS="http://beanFiles" returnQName="retNS:getFirst_nameReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getLast_name" qname="operNS:getLast_name" xmlns:operNS="http://beanFiles" returnQName="retNS:getLast_nameReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getGender" qname="operNS:getGender" xmlns:operNS="http://beanFiles" returnQName="retNS:getGenderReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getContact_no" qname="operNS:getContact_no" xmlns:operNS="http://beanFiles" returnQName="retNS:getContact_noReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getZipcode" qname="operNS:getZipcode" xmlns:operNS="http://beanFiles" returnQName="retNS:getZipcodeReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getCity" qname="operNS:getCity" xmlns:operNS="http://beanFiles" returnQName="retNS:getCityReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getId_no" qname="operNS:getId_no" xmlns:operNS="http://beanFiles" returnQName="retNS:getId_noReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getId_type" qname="operNS:getId_type" xmlns:operNS="http://beanFiles" returnQName="retNS:getId_typeReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setHire_date" qname="operNS:setHire_date" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:hire_date" xmlns:pns="http://beanFiles" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setPerson_id" qname="operNS:setPerson_id" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:person_id" xmlns:pns="http://beanFiles" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setCity" qname="operNS:setCity" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:city" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setGender" qname="operNS:setGender" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:gender" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setAddress" qname="operNS:setAddress" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:address" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setZipcode" qname="operNS:setZipcode" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:zipcode" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getPerson_id" qname="operNS:getPerson_id" xmlns:operNS="http://beanFiles" returnQName="retNS:getPerson_idReturn" xmlns:retNS="http://beanFiles" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setLast_name" qname="operNS:setLast_name" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:last_name" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setContact_no" qname="operNS:setContact_no" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:contact_no" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setId_no" qname="operNS:setId_no" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:id_no" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setId_type" qname="operNS:setId_type" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:id_type" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setCreated_by" qname="operNS:setCreated_by" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:created_by" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getCreated_by" qname="operNS:getCreated_by" xmlns:operNS="http://beanFiles" returnQName="retNS:getCreated_byReturn" xmlns:retNS="http://beanFiles" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getEnd_date" qname="operNS:getEnd_date" xmlns:operNS="http://beanFiles" returnQName="retNS:getEnd_dateReturn" xmlns:retNS="http://beanFiles" returnType="rtns:dateTime" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getHire_date" qname="operNS:getHire_date" xmlns:operNS="http://beanFiles" returnQName="retNS:getHire_dateReturn" xmlns:retNS="http://beanFiles" returnType="rtns:dateTime" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setEnd_date" qname="operNS:setEnd_date" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:end_date" xmlns:pns="http://beanFiles" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setFirst_name" qname="operNS:setFirst_name" xmlns:operNS="http://beanFiles" soapAction="" >
+        <parameter qname="pns:first_name" xmlns:pns="http://beanFiles" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getState getContact_no setLast_updated_by getLast_updated setId_type getPosition setWork_description setCreation_date getCreated_by getWork_description setGender getEnd_date setDate_of_birth setPerson_id setState setLast_updated getEmployee_id setLast_name getFirst_name getCity setEmployee_id getAddress getId_no getCreation_date setCity setHire_date setMiddle_initial getLast_name getDate_of_birth getGender setAddress setPosition getMiddle_initial getZipcode setId_no getPerson_id getId_type setEnd_date setZipcode setContact_no getLast_updated_by getHire_date setFirst_name setCreated_by"/>
+
+  </service>
+</deployment>
